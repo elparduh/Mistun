@@ -11,9 +11,9 @@ protocol Endpoint {
 }
 
 extension Endpoint {
-    var scheme: String {""}
-    var host: String { "" }
-    var basePath: String { "" }
+    var scheme: String {"https"}
+    var host: String { "api.thecatapi.com" }
+    var basePath: String { "/v1/images" }
 }
 
 extension Endpoint {
