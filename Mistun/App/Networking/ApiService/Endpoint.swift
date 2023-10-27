@@ -31,11 +31,9 @@ extension Endpoint {
         components.scheme = scheme
         components.host = host
         components.path = basePath + path
-
         guard let url = components.url else {
             preconditionFailure("Invalid URL components: \(components)")
         }
-
         return url
     }
 }

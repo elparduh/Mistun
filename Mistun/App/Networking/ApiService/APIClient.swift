@@ -1,10 +1,10 @@
 import Foundation
 
-protocol ApiClientProtocol {
+protocol APIClientProtocol {
   func request<T: Decodable>(endpoint: Endpoint, type: T.Type) async throws -> T
 }
 
-struct ApiClient: ApiClientProtocol {
+struct APIClient: APIClientProtocol {
   private let urlSession: URLSession
 
   init(urlSession: URLSession = URLSession.shared) {
@@ -25,24 +25,24 @@ struct ApiClient: ApiClientProtocol {
       request: (data: Data, httpResponse: URLResponse)
   ) throws -> T {
       guard let httpResponse = request.httpResponse as? HTTPURLResponse
-      else { throw ApiError.unknownError }
+      else { throw APIError.unknownError }
 
       switch httpResponse.statusCode {
       case HttpResponseStatus.ok:
           return try decodeModel(data: request.data)
       case HttpResponseStatus.clienteError:
-          throw ApiError.clientError
+          throw APIError.clientError
       case HttpResponseStatus.serverError:
-          throw ApiError.serverError
+          throw APIError.serverError
       default:
-          throw ApiError.unknownError
+          throw APIError.unknownError
       }
   }
   
   private func decodeModel<T: Decodable>(data: Data) throws -> T {
     let decoder = JSONDecoder()
     let model = try? decoder.decode(T.self, from: data)
-    guard let model = model else { throw ApiError.decodingError }
+    guard let model = model else { throw APIError.decodingError }
     return model
   }
 }

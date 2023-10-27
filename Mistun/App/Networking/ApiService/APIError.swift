@@ -1,13 +1,13 @@
 import Foundation
 
-enum ApiError: Error {
+enum APIError: Error {
     case clientError
     case serverError
     case unknownError
     case decodingError
 }
 
-extension ApiError: LocalizedError {
+extension APIError: LocalizedError {
 
     public var errorDescription: String? {
         switch self {
