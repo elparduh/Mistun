@@ -1,10 +1,3 @@
-//
-//  SceneDelegate.swift
-//  Mistun
-//
-//  Created by Juan Ticante Vicente on 25/10/23.
-//
-
 import UIKit
 
 final class SceneDelegate: UIResponder, UIWindowSceneDelegate {
