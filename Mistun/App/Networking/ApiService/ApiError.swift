@@ -4,7 +4,7 @@ enum ApiError: Error {
     case clientError
     case serverError
     case unknownError
-    case errorDecoding
+    case decodingError
 }
 
 extension ApiError: LocalizedError {
@@ -17,7 +17,7 @@ extension ApiError: LocalizedError {
             return NSLocalizedString("Server error", comment: "")
         case .unknownError:
             return NSLocalizedString("Unknown error", comment: "")
-        case .errorDecoding:
+        case .decodingError:
             return NSLocalizedString("Error decoding", comment: "")
         }
     }

@@ -10,6 +10,7 @@
 		205686922AEB6BBF0020D729 /* ApiClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 205686912AEB6BBF0020D729 /* ApiClient.swift */; };
 		205686942AEB73B50020D729 /* ApiError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 205686932AEB73B50020D729 /* ApiError.swift */; };
 		205686962AEB75FB0020D729 /* HttpResponseStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 205686952AEB75FB0020D729 /* HttpResponseStatus.swift */; };
+		205686982AEB7BEA0020D729 /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 205686972AEB7BEA0020D729 /* Endpoint.swift */; };
 		20F3C46B2AEA145B004E6F00 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20F3C46A2AEA145B004E6F00 /* AppDelegate.swift */; };
 		20F3C46D2AEA145B004E6F00 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20F3C46C2AEA145B004E6F00 /* SceneDelegate.swift */; };
 		20F3C46F2AEA145B004E6F00 /* CatsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20F3C46E2AEA145B004E6F00 /* CatsViewController.swift */; };
@@ -32,6 +33,7 @@
 		205686912AEB6BBF0020D729 /* ApiClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiClient.swift; sourceTree = "<group>"; };
 		205686932AEB73B50020D729 /* ApiError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiError.swift; sourceTree = "<group>"; };
 		205686952AEB75FB0020D729 /* HttpResponseStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpResponseStatus.swift; sourceTree = "<group>"; };
+		205686972AEB7BEA0020D729 /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
 		20F3C4672AEA145B004E6F00 /* Mistun.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Mistun.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		20F3C46A2AEA145B004E6F00 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		20F3C46C2AEA145B004E6F00 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -133,6 +135,7 @@
 		205686902AEB6B770020D729 /* ApiService */ = {
 			isa = PBXGroup;
 			children = (
+				205686972AEB7BEA0020D729 /* Endpoint.swift */,
 				205686952AEB75FB0020D729 /* HttpResponseStatus.swift */,
 				205686932AEB73B50020D729 /* ApiError.swift */,
 				205686912AEB6BBF0020D729 /* ApiClient.swift */,
@@ -275,6 +278,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				205686982AEB7BEA0020D729 /* Endpoint.swift in Sources */,
 				20F3C46F2AEA145B004E6F00 /* CatsViewController.swift in Sources */,
 				20F3C46B2AEA145B004E6F00 /* AppDelegate.swift in Sources */,
 				205686962AEB75FB0020D729 /* HttpResponseStatus.swift in Sources */,
