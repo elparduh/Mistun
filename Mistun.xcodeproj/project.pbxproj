@@ -11,6 +11,7 @@
 		205686942AEB73B50020D729 /* APIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 205686932AEB73B50020D729 /* APIError.swift */; };
 		205686962AEB75FB0020D729 /* HttpResponseStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 205686952AEB75FB0020D729 /* HttpResponseStatus.swift */; };
 		205686982AEB7BEA0020D729 /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 205686972AEB7BEA0020D729 /* Endpoint.swift */; };
+		2064AB642AEE0F8600D34EC9 /* CatsRequest+Mapping.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2064AB632AEE0F8600D34EC9 /* CatsRequest+Mapping.swift */; };
 		20F3C46B2AEA145B004E6F00 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20F3C46A2AEA145B004E6F00 /* AppDelegate.swift */; };
 		20F3C46D2AEA145B004E6F00 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20F3C46C2AEA145B004E6F00 /* SceneDelegate.swift */; };
 		20F3C46F2AEA145B004E6F00 /* CatsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20F3C46E2AEA145B004E6F00 /* CatsViewController.swift */; };
@@ -34,6 +35,7 @@
 		205686932AEB73B50020D729 /* APIError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIError.swift; sourceTree = "<group>"; };
 		205686952AEB75FB0020D729 /* HttpResponseStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpResponseStatus.swift; sourceTree = "<group>"; };
 		205686972AEB7BEA0020D729 /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
+		2064AB632AEE0F8600D34EC9 /* CatsRequest+Mapping.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CatsRequest+Mapping.swift"; sourceTree = "<group>"; };
 		20F3C4672AEA145B004E6F00 /* Mistun.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Mistun.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		20F3C46A2AEA145B004E6F00 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		20F3C46C2AEA145B004E6F00 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -102,6 +104,7 @@
 		2056868C2AEB63930020D729 /* Cats */ = {
 			isa = PBXGroup;
 			children = (
+				2064AB622AEE0F6600D34EC9 /* Data */,
 				20F3C46E2AEA145B004E6F00 /* CatsViewController.swift */,
 			);
 			path = Cats;
@@ -141,6 +144,14 @@
 				205686912AEB6BBF0020D729 /* APIClient.swift */,
 			);
 			path = ApiService;
+			sourceTree = "<group>";
+		};
+		2064AB622AEE0F6600D34EC9 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				2064AB632AEE0F8600D34EC9 /* CatsRequest+Mapping.swift */,
+			);
+			path = Data;
 			sourceTree = "<group>";
 		};
 		20F3C45E2AEA145B004E6F00 = {
@@ -285,6 +296,7 @@
 				20F3C46D2AEA145B004E6F00 /* SceneDelegate.swift in Sources */,
 				205686942AEB73B50020D729 /* APIError.swift in Sources */,
 				205686922AEB6BBF0020D729 /* APIClient.swift in Sources */,
+				2064AB642AEE0F8600D34EC9 /* CatsRequest+Mapping.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
