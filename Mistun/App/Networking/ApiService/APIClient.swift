@@ -1,7 +1,7 @@
 import Foundation
 
 protocol APIClientProtocol {
-  func request<T: Decodable>(endpoint: Endpoint, type: T.Type) async throws -> T
+  func request<T: Codable>(endpoint: Endpoint, type: T.Type) async throws -> T
 }
 
 struct APIClient: APIClientProtocol {
@@ -11,17 +11,17 @@ struct APIClient: APIClientProtocol {
     self.urlSession = urlSession
   }
 
-  func request<T>(endpoint: Endpoint, type: T.Type) async throws -> T where T : Decodable {
+  func request<T>(endpoint: Endpoint, type: T.Type) async throws -> T where T : Codable {
     try await makeRequest(endpoint: endpoint)
   }
 
-  private func makeRequest<T: Decodable>(endpoint: Endpoint) async throws -> T {
+  private func makeRequest<T: Codable>(endpoint: Endpoint) async throws -> T {
     let request = try await urlSession.data(for: endpoint.urlRequest())
     return try validateResponse(request:request)
   }
 
 
-  private func validateResponse<T: Decodable>(
+  private func validateResponse<T: Codable>(
       request: (data: Data, httpResponse: URLResponse)
   ) throws -> T {
       guard let httpResponse = request.httpResponse as? HTTPURLResponse
@@ -39,7 +39,7 @@ struct APIClient: APIClientProtocol {
       }
   }
   
-  private func decodeModel<T: Decodable>(data: Data) throws -> T {
+  private func decodeModel<T: Codable>(data: Data) throws -> T {
     let decoder = JSONDecoder()
     let model = try? decoder.decode(T.self, from: data)
     guard let model = model else { throw APIError.decodingError }
