@@ -7,13 +7,13 @@ protocol CatsUIProtocol {
     func showCats(_ cats: [Cat])
 }
 
-protocol DogsPresenterProtocol {
+protocol CatsPresenterProtocol {
   var catsUseCaseProviderProtocol: CatsUseCaseProviderProtocol { get }
   var catsUIProtocol: CatsUIProtocol { get }
   func fechtCats()
 }
 
-struct CatsPresenter: DogsPresenterProtocol {
+struct CatsPresenter: CatsPresenterProtocol {
 
   var catsUseCaseProviderProtocol: CatsUseCaseProviderProtocol
   var catsUIProtocol: CatsUIProtocol
