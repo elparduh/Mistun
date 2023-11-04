@@ -8,12 +8,11 @@ enum HTTPMethodType: String {
 protocol Endpoint {
   var path: String { get }
   var method: HTTPMethodType { get }
-  var queryParametersEncodable: Encodable? { get }
-  var queryParameters: [String: String] { get }
+  var queryItems: [URLQueryItem] { get }
 }
 
 extension Endpoint {
-  var scheme: String {"https"}
+  var scheme: String { "https" }
   var host: String { "api.thecatapi.com" }
   var basePath: String { "/v1/images" }
 }
@@ -34,14 +33,9 @@ extension Endpoint {
     components.scheme = scheme
     components.host = host
     components.path = basePath + path
-    let queryParameters = try queryParametersEncodable?.toDictionary() ?? queryParameters
-    queryParameters.forEach {
-        urlQueryItems.append(URLQueryItem(name: $0.key, value: "\($0.value)"))
-    }
-    components.queryItems = !urlQueryItems.isEmpty ? urlQueryItems : nil
-    guard let url = components.url else {
-      preconditionFailure("Invalid URL components: \(components)")
-    }
+    components.queryItems = queryItems
+
+    guard let url = components.url else { throw RequestGenerationError.components }
     return url
   }
 }

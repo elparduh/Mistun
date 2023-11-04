@@ -22,3 +22,17 @@ extension APIError: LocalizedError {
         }
     }
 }
+
+enum RequestGenerationError: Error {
+    case components
+}
+
+extension RequestGenerationError: LocalizedError {
+
+  public var errorDescription: String? {
+    switch self {
+    case .components:
+      return NSLocalizedString("Request Generation Error", comment: "")
+    }
+  }
+}
