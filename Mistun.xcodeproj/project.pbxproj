@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2021B6E62AF68701000D8271 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2021B6E52AF68701000D8271 /* Constants.swift */; };
+		2021B6E92AF687EB000D8271 /* MistunEndPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2021B6E82AF687EB000D8271 /* MistunEndPoint.swift */; };
 		205686922AEB6BBF0020D729 /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 205686912AEB6BBF0020D729 /* APIClient.swift */; };
 		205686942AEB73B50020D729 /* APIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 205686932AEB73B50020D729 /* APIError.swift */; };
 		205686962AEB75FB0020D729 /* HttpResponseStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 205686952AEB75FB0020D729 /* HttpResponseStatus.swift */; };
@@ -30,6 +32,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2021B6E52AF68701000D8271 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		2021B6E82AF687EB000D8271 /* MistunEndPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MistunEndPoint.swift; sourceTree = "<group>"; };
 		205686912AEB6BBF0020D729 /* APIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
 		205686932AEB73B50020D729 /* APIError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIError.swift; sourceTree = "<group>"; };
 		205686952AEB75FB0020D729 /* HttpResponseStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpResponseStatus.swift; sourceTree = "<group>"; };
@@ -63,11 +67,28 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2021B6E42AF686F2000D8271 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				2021B6E52AF68701000D8271 /* Constants.swift */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		2021B6E72AF687B9000D8271 /* Endpoints */ = {
+			isa = PBXGroup;
+			children = (
+				2021B6E82AF687EB000D8271 /* MistunEndPoint.swift */,
+			);
+			path = Endpoints;
+			sourceTree = "<group>";
+		};
 		205686882AEB62A40020D729 /* App */ = {
 			isa = PBXGroup;
 			children = (
-				2056868A2AEB63310020D729 /* Modules */,
+				2021B6E42AF686F2000D8271 /* Core */,
 				2056868F2AEB6B4B0020D729 /* Networking */,
+				2056868A2AEB63310020D729 /* Modules */,
 				2056868D2AEB63D10020D729 /* CompositionRoot */,
 				205686892AEB62F40020D729 /* Resources */,
 			);
@@ -102,6 +123,7 @@
 		2056868C2AEB63930020D729 /* Cats */ = {
 			isa = PBXGroup;
 			children = (
+				2021B6E72AF687B9000D8271 /* Endpoints */,
 				20F3C46E2AEA145B004E6F00 /* CatsViewController.swift */,
 			);
 			path = Cats;
@@ -280,11 +302,13 @@
 			files = (
 				205686982AEB7BEA0020D729 /* Endpoint.swift in Sources */,
 				20F3C46F2AEA145B004E6F00 /* CatsViewController.swift in Sources */,
+				2021B6E92AF687EB000D8271 /* MistunEndPoint.swift in Sources */,
 				20F3C46B2AEA145B004E6F00 /* AppDelegate.swift in Sources */,
 				205686962AEB75FB0020D729 /* HttpResponseStatus.swift in Sources */,
 				20F3C46D2AEA145B004E6F00 /* SceneDelegate.swift in Sources */,
 				205686942AEB73B50020D729 /* APIError.swift in Sources */,
 				205686922AEB6BBF0020D729 /* APIClient.swift in Sources */,
+				2021B6E62AF68701000D8271 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
