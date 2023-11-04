@@ -12,9 +12,9 @@ protocol Endpoint {
 }
 
 extension Endpoint {
-  var scheme: String { "https" }
-  var host: String { "api.thecatapi.com" }
-  var basePath: String { "/v1/images" }
+  var scheme: String { Constants.schemeURL }
+  var host: String { Constants.host }
+  var basePath: String { Constants.basePath }
 }
 
 extension Endpoint {
@@ -29,7 +29,6 @@ extension Endpoint {
 
   func asUrl() throws -> URL {
     var components = URLComponents()
-    var urlQueryItems = [URLQueryItem]()
     components.scheme = scheme
     components.host = host
     components.path = basePath + path
