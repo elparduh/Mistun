@@ -29,7 +29,6 @@ extension Endpoint {
 
   func asUrl() throws -> URL {
     var components = URLComponents()
-    var urlQueryItems = [URLQueryItem]()
     components.scheme = scheme
     components.host = host
     components.path = basePath + path

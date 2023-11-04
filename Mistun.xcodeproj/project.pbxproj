@@ -9,6 +9,13 @@
 /* Begin PBXBuildFile section */
 		2021B6E62AF68701000D8271 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2021B6E52AF68701000D8271 /* Constants.swift */; };
 		2021B6E92AF687EB000D8271 /* MistunEndPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2021B6E82AF687EB000D8271 /* MistunEndPoint.swift */; };
+		2021B6EC2AF68D7A000D8271 /* CatDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2021B6EB2AF68D7A000D8271 /* CatDTO.swift */; };
+		2021B6EF2AF68F02000D8271 /* Cat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2021B6EE2AF68F02000D8271 /* Cat.swift */; };
+		2021B6F12AF68F9D000D8271 /* CatDTO+Mapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2021B6F02AF68F9D000D8271 /* CatDTO+Mapper.swift */; };
+		2021B6F32AF6905D000D8271 /* CatsDataSourceRemote.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2021B6F22AF6905D000D8271 /* CatsDataSourceRemote.swift */; };
+		2021B6F62AF6917F000D8271 /* DogsRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2021B6F52AF6917F000D8271 /* DogsRepository.swift */; };
+		2021B6F82AF6931D000D8271 /* GetCatsUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2021B6F72AF6931D000D8271 /* GetCatsUseCase.swift */; };
+		2021B6FA2AF695EE000D8271 /* CatsUseCaseProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2021B6F92AF695EE000D8271 /* CatsUseCaseProvider.swift */; };
 		205686922AEB6BBF0020D729 /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 205686912AEB6BBF0020D729 /* APIClient.swift */; };
 		205686942AEB73B50020D729 /* APIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 205686932AEB73B50020D729 /* APIError.swift */; };
 		205686962AEB75FB0020D729 /* HttpResponseStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 205686952AEB75FB0020D729 /* HttpResponseStatus.swift */; };
@@ -34,6 +41,13 @@
 /* Begin PBXFileReference section */
 		2021B6E52AF68701000D8271 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		2021B6E82AF687EB000D8271 /* MistunEndPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MistunEndPoint.swift; sourceTree = "<group>"; };
+		2021B6EB2AF68D7A000D8271 /* CatDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatDTO.swift; sourceTree = "<group>"; };
+		2021B6EE2AF68F02000D8271 /* Cat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cat.swift; sourceTree = "<group>"; };
+		2021B6F02AF68F9D000D8271 /* CatDTO+Mapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CatDTO+Mapper.swift"; sourceTree = "<group>"; };
+		2021B6F22AF6905D000D8271 /* CatsDataSourceRemote.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatsDataSourceRemote.swift; sourceTree = "<group>"; };
+		2021B6F52AF6917F000D8271 /* DogsRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogsRepository.swift; sourceTree = "<group>"; };
+		2021B6F72AF6931D000D8271 /* GetCatsUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetCatsUseCase.swift; sourceTree = "<group>"; };
+		2021B6F92AF695EE000D8271 /* CatsUseCaseProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatsUseCaseProvider.swift; sourceTree = "<group>"; };
 		205686912AEB6BBF0020D729 /* APIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
 		205686932AEB73B50020D729 /* APIError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIError.swift; sourceTree = "<group>"; };
 		205686952AEB75FB0020D729 /* HttpResponseStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpResponseStatus.swift; sourceTree = "<group>"; };
@@ -83,6 +97,35 @@
 			path = Endpoints;
 			sourceTree = "<group>";
 		};
+		2021B6EA2AF68CF4000D8271 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				2021B6F42AF69168000D8271 /* Remote */,
+				2021B6F52AF6917F000D8271 /* DogsRepository.swift */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		2021B6ED2AF68EC7000D8271 /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				2021B6EE2AF68F02000D8271 /* Cat.swift */,
+				2021B6F72AF6931D000D8271 /* GetCatsUseCase.swift */,
+				2021B6F92AF695EE000D8271 /* CatsUseCaseProvider.swift */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		2021B6F42AF69168000D8271 /* Remote */ = {
+			isa = PBXGroup;
+			children = (
+				2021B6EB2AF68D7A000D8271 /* CatDTO.swift */,
+				2021B6F02AF68F9D000D8271 /* CatDTO+Mapper.swift */,
+				2021B6F22AF6905D000D8271 /* CatsDataSourceRemote.swift */,
+			);
+			path = Remote;
+			sourceTree = "<group>";
+		};
 		205686882AEB62A40020D729 /* App */ = {
 			isa = PBXGroup;
 			children = (
@@ -124,6 +167,8 @@
 			isa = PBXGroup;
 			children = (
 				2021B6E72AF687B9000D8271 /* Endpoints */,
+				2021B6EA2AF68CF4000D8271 /* Data */,
+				2021B6ED2AF68EC7000D8271 /* Domain */,
 				20F3C46E2AEA145B004E6F00 /* CatsViewController.swift */,
 			);
 			path = Cats;
@@ -302,10 +347,17 @@
 			files = (
 				205686982AEB7BEA0020D729 /* Endpoint.swift in Sources */,
 				20F3C46F2AEA145B004E6F00 /* CatsViewController.swift in Sources */,
+				2021B6EC2AF68D7A000D8271 /* CatDTO.swift in Sources */,
+				2021B6FA2AF695EE000D8271 /* CatsUseCaseProvider.swift in Sources */,
+				2021B6EF2AF68F02000D8271 /* Cat.swift in Sources */,
+				2021B6F32AF6905D000D8271 /* CatsDataSourceRemote.swift in Sources */,
 				2021B6E92AF687EB000D8271 /* MistunEndPoint.swift in Sources */,
+				2021B6F62AF6917F000D8271 /* DogsRepository.swift in Sources */,
+				2021B6F12AF68F9D000D8271 /* CatDTO+Mapper.swift in Sources */,
 				20F3C46B2AEA145B004E6F00 /* AppDelegate.swift in Sources */,
 				205686962AEB75FB0020D729 /* HttpResponseStatus.swift in Sources */,
 				20F3C46D2AEA145B004E6F00 /* SceneDelegate.swift in Sources */,
+				2021B6F82AF6931D000D8271 /* GetCatsUseCase.swift in Sources */,
 				205686942AEB73B50020D729 /* APIError.swift in Sources */,
 				205686922AEB6BBF0020D729 /* APIClient.swift in Sources */,
 				2021B6E62AF68701000D8271 /* Constants.swift in Sources */,
