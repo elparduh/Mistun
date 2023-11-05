@@ -1,8 +1,9 @@
 import Foundation
+import RxSwift
 
 protocol CatsRepositoryProtocol {
   var catsDataSourceRemoteProtocol: CatsDataSourceRemoteProtocol { get }
-  func getCats() async throws -> [Cat]
+  func getCats() -> Observable<[Cat]>
 }
 
 struct CatsRepository: CatsRepositoryProtocol {
@@ -13,7 +14,7 @@ struct CatsRepository: CatsRepositoryProtocol {
     self.catsDataSourceRemoteProtocol = catsDataSourceRemoteProtocol
   }
 
-  func getCats() async throws -> [Cat] {
-    try await catsDataSourceRemoteProtocol.getCats()
+  func getCats() -> Observable<[Cat]> {
+    catsDataSourceRemoteProtocol.getCats()
   }
 }
