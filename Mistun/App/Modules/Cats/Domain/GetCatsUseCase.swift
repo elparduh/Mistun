@@ -1,8 +1,9 @@
 import Foundation
+import RxSwift
 
 protocol CatsUseCaseProtocol {
   var catsRepositoryProtocol: CatsRepositoryProtocol { get }
-  func execute() async -> Result<[Cat], Error>
+  func getCats() -> Observable<[Cat]>
 }
 
 struct GetCatsUseCase: CatsUseCaseProtocol {
@@ -13,12 +14,7 @@ struct GetCatsUseCase: CatsUseCaseProtocol {
     self.catsRepositoryProtocol = catsRepositoryProtocol
   }
 
-  func execute() async -> Result<[Cat], Error> {
-    do {
-      let repositoryResult = try await catsRepositoryProtocol.getCats()
-        return .success(repositoryResult)
-    } catch {
-        return .failure(error)
-    }
+  func getCats() -> Observable<[Cat]> {
+    catsRepositoryProtocol.getCats()
   }
 }

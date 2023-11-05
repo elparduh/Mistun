@@ -25,8 +25,5 @@ extension CatsViewController: CatsUIProtocol {
 
   func hideLoader() { }
 
-  func showCats(_ cats: [Cat]) {
-    let cats = cats
-    print(cats)
-  }
+  func showCats(_ cats: [Cat]) { }
 }

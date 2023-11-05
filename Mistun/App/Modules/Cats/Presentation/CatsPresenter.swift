@@ -1,4 +1,5 @@
 import Foundation
+import RxSwift
 
 protocol CatsUIProtocol {
     func showError(_ error: String)
@@ -15,6 +16,7 @@ protocol CatsPresenterProtocol {
 
 struct CatsPresenter: CatsPresenterProtocol {
 
+  private let disposeBag = DisposeBag()
   var catsUseCaseProviderProtocol: CatsUseCaseProviderProtocol
   var catsUIProtocol: CatsUIProtocol
 
@@ -24,17 +26,13 @@ struct CatsPresenter: CatsPresenterProtocol {
   }
 
   func fechtCats() {
-    Task {
-      catsUIProtocol.showLoader()
-      let result = await catsUseCaseProviderProtocol.getCatsUseCaseProvider().execute()
-      switch result {
-      case .success(let cats):
-        catsUIProtocol.hideLoader()
+    catsUIProtocol.showLoader()
+    catsUseCaseProviderProtocol.getCatsUseCaseProvider().getCats()
+      .observe(on: MainScheduler.instance)
+      .subscribe(onNext: { cats in
         catsUIProtocol.showCats(cats)
-      case .failure(let error):
-        catsUIProtocol.hideLoader()
+      }, onError: { error in
         catsUIProtocol.showError(error.localizedDescription)
-      }
-    }
+      }).disposed(by: disposeBag)
   }
 }
